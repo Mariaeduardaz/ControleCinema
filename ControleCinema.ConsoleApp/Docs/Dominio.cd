@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ControleCinema.ConsoleApp.ModuloGenero.Genero">
+    <Position X="7" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModuloGenero\Genero.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ControleCinema.ConsoleApp.ModuloFuncionario.Funcionario">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAEAABAAAAAAAAAAAAAAAAAIAEAAAA=</HashCode>
+      <FileName>ModuloFuncionario\Funcionario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ControleCinema.ConsoleApp.ModuloFilme.FilmeCinema">
+    <Position X="7" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAQAAAAAAAAQAAAAAAIAACAAAA=</HashCode>
+      <FileName>ModuloFilme\Filme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ControleCinema.ConsoleApp.ModuloSessao.Sessao">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAEAAAAACAAAAAAAAAAIAAEAAAAAAA=</HashCode>
+      <FileName>ModuloSessao\Sessao.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="ingressos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ControleCinema.ConsoleApp.ModuloSessao.Ingresso">
+    <Position X="0.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAQAAAIAAA=</HashCode>
+      <FileName>ModuloSessao\Ingresso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ControleCinema.ConsoleApp.ModuloSala.RepositorioSala" Collapsed="true">
+    <Position X="5.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModuloSala\RepositorioSala.cs</FileName>
+      <NewMemberFileName>ModuloSala\Sala.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ControleCinema.ConsoleApp.ModuloFuncionario.TelaCadastroFuncionario" Collapsed="true">
+    <Position X="2.5" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAgAAAEAACAAQAACAAAAAAAAAAAAEAQAAA=</HashCode>
+      <FileName>ModuloFuncionario\TelaCadastroFuncionario.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>
