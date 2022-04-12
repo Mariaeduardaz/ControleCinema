@@ -1,23 +1,26 @@
 ﻿using ControleCinema.ConsoleApp.ModuloFilme;
 using ControleCinema.ConsoleApp.ModuloFuncionario;
 using ControleCinema.ConsoleApp.ModuloGenero;
+using ControleCinema.ConsoleApp.ModuloSessao;
 using System;
 
 namespace ControleCinema.ConsoleApp.Compartilhado
 {
     public class TelaMenuPrincipal
     {
+        // bastante erro, meu tempo estourouuu
         private IRepositorio<Funcionario> repositorioFuncionario;
         private TelaCadastroFuncionario telaCadastroFuncionario;
 
         private IRepositorio<Genero> repositorioGenero;
         private TelaCadastroGenero telaCadastroGenero;
 
-        private IRepositorio<Filme> repositoriaFilme;
+        private IRepositorio<Filme> repositorioFilme;
         private TelaCadastroFilme telaCadastroFilme;
 
         private IRepositorio<Sessao> repositorioSessao;
         private TelaCadastroSessao TelaCadastroSessao;
+        private IRepositorio<FilmeCinema> repositoriaFilme;
 
         public TelaMenuPrincipal(Notificador notificador)
         {
@@ -34,60 +37,58 @@ namespace ControleCinema.ConsoleApp.Compartilhado
             TelaCadastroSessao = new TelaCadastroSessao(repositorioSessao, notificador);
 
 
-        public TelaMenuPrincipal(IRepositorio<Filme> repositorioFuncionario)
-        {
-          this.repositorioFuncionario = repositorioFuncionario;
-        }
 
-        public string MostrarOpcoes()
-        {
-            Console.Clear();
+            public string MostrarOpcoes()
+            {
+                Console.Clear();
 
-            Console.WriteLine("Controle de Sessões de Cinema 1.0");
+                Console.WriteLine("Controle de Sessões de Cinema 1.0");
 
-            Console.WriteLine();
+                Console.WriteLine();
 
-            Console.WriteLine("Digite 1 para Gerenciar Funcionários");
-            Console.WriteLine("Digite 2 para Gerenciar Gêneros de Filme");
-            Console.WriteLine("Digite 3 para Gerenciar Filmes");
-            Console.WriteLine("Digite 4 para Gerenciar Sessões");
-            Console.WriteLine("Digite 5 para Vender Ingresos");
+                Console.WriteLine("Digite 1 para Gerenciar Funcionários");
+                Console.WriteLine("Digite 2 para Gerenciar Gêneros de Filme");
+                Console.WriteLine("Digite 3 para Gerenciar Filmes");
+                Console.WriteLine("Digite 4 para Gerenciar Sessões");
+                Console.WriteLine("Digite 5 para Vender Ingresos");
 
-              
+
 
                 Console.WriteLine("Digite s para sair");
 
-            string opcaoSelecionada = Console.ReadLine();
+                string opcaoSelecionada = Console.ReadLine();
 
-            return opcaoSelecionada;
+                return opcaoSelecionada;
+            }
+
+            public TelaBase ObterTela()
+            {
+                string opcao = MostrarOpcoes();
+
+                TelaBase tela = null;
+
+                if (opcao == "1")
+                    tela = telaCadastroFuncionario;
+
+                else if (opcao == "2")
+                    tela = telaCadastroGenero;
+
+                else if (opcao == "3")
+                    tela = null;
+
+                else if (opcao == "4")
+                    tela = null;
+
+                else if (opcao == "5")
+                    tela = null;
+
+                return tela;
+            }
         }
 
-        public TelaBase ObterTela()
+       
+
+        internal class Filme
         {
-            string opcao = MostrarOpcoes();
-
-            TelaBase tela = null;
-
-            if (opcao == "1")
-                tela =  telaCadastroFuncionario;
-
-            else if (opcao == "2")
-                tela =  telaCadastroGenero;
-
-            else if (opcao == "3")
-                tela =  null;
-
-            else if (opcao == "4")
-                tela =  null;
-
-            else if (opcao == "5")
-                tela =  null;
-
-            return tela;
         }
-    }
-
-    internal class Filme
-    {
-    }
-}
+    } }

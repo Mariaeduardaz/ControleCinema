@@ -9,6 +9,15 @@ namespace ControleCinema.ConsoleApp.ModuloSessao
 {
     internal class TelaCadastroSessao 
     {
+        private IRepositorio<Sessao> repositorioSessao;
+        private Notificador notificador;
+
+        public TelaCadastroSessao(IRepositorio<Sessao> repositorioSessao, Notificador notificador)
+        {
+            this.repositorioSessao = repositorioSessao;
+            this.notificador = notificador;
+        }
+
         public class TelaCadastroSessaoo
         {
             private readonly IRepositorio<Sessao> _repositorioSessao;

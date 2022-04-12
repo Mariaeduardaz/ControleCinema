@@ -14,12 +14,17 @@ namespace ControleCinema.ConsoleApp.ModuloFilme
         private readonly IRepositorio<FilmeCinema> _repositorioFilmeCinema;
         private Notificador _notificador;
         public Genero _genero;
+        private object repositoriaFilme;
+        private Notificador notificador;
+
         public TelaCadastroFilme(IRepositorio<FilmeCinema> repositorioFilmeCinema, Notificador notificadorfilme, Genero genero)
             : base("Cadastro de Filmes")
         {
             _repositorioFilmeCinema = repositorioFilmeCinema;
             _notificador = notificadorfilme;
         }
+
+       
 
         public void Inserir()
         {
